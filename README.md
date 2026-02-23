@@ -6,7 +6,7 @@ Most outbound starts with a list and a template. GTM Alpha starts with a questio
 
 The system takes a company domain as input and produces signal-based intelligence that tells you who to contact, why now, and what to say — with every claim sourced or flagged. It then tracks what actually works, updates its own assumptions, and gets sharper every cycle.
 
-This repo contains the architecture overview and sample outputs. The source system is private.
+This repo walks through the architecture and includes sample outputs. The full system runs on Claude Code with 8 skill modules, 7 contract specs, and a learning engine that closes the loop.
 
 ---
 
@@ -121,4 +121,4 @@ GTM Alpha started because I kept seeing the same problem: every time I built out
 
 So I built a system where the research is structured, the outputs are executable, claims are verified instead of assumed, and outcomes feed back into the next cycle. It's not a tool — it's an operating system for outbound intelligence.
 
-The source is private. If you want to see it run or talk about what it does, reach out.
+If you want to see it run, reach out.
