@@ -6,7 +6,7 @@ Most outbound starts with a list and a template. GTM Alpha starts with a questio
 
 The system takes a company domain as input and produces signal-based intelligence that tells you who to contact, why now, and what to say — with every claim sourced or flagged. It then tracks what actually works, updates its own assumptions, and gets sharper every cycle.
 
-This repo walks through the architecture and includes sample outputs. The full system runs on Claude Code with 8 skill modules, 7 contract specs, and a learning engine that closes the loop.
+This repo walks through the architecture and includes sample outputs.
 
 ---
 
@@ -83,42 +83,38 @@ Updated scores feed back into Layer 1 for the next research cycle. Winning messa
 
 ---
 
-## Sample Outputs
+## Where It's Run
 
-This repo includes two example outputs to demonstrate the depth and rigor of the system:
+GTM Alpha has been deployed against real companies, not just tested in a sandbox.
 
-### [Intelligence Brief — Bobyard](examples/intelligence-brief-sample.md)
+**Wold Architects & Engineers** — Architecture and engineering firm acquired by a PE-backed holding company. Ran the full Fast Path: intelligence brief, play design with 3 signal-triggered outbound plays, PVP deliverables for a target school district, and a complete operator blueprint. Deliverables were reviewed by the growth engineering team and used to shape the outbound motion for the architecture vertical. This was a cold start — no call data, no existing playbooks, no prior outbound infrastructure.
 
-A full Layer 1 brief for Bobyard (AI-powered estimating for commercial landscape contractors). Includes:
-- Value proposition analysis (real pain, not marketing language)
-- Three buyer personas with situational qualifiers
-- Three signal stacks with conviction thresholds
-- Ten individually scored signal hypotheses with validation data, timing windows, and decay rates
-- Competitive intelligence and strategic recommendations
-- Honest confidence assessment (what's validated vs. what's speculative)
+**Helpsite (HR services)** — Ran as a live stress test of the v3 system. Produced the full brief and execution stack. The run surfaced 52 specific feedback items that drove the current version — claim sourcing gaps, document structure problems, and places where the system was too confident without evidence. Every major improvement in the current system traces back to something that broke or underperformed in this deployment.
 
-### [Signal Validation Deep Dive](examples/signal-validation-sample.md)
+**Bobyard (AI construction estimating)** — Full intelligence brief with 10 signal hypotheses, signal validation deep dives with named companies and real job board data, and a structured data pipeline spec for government RFP monitoring. Sample outputs from this run are included in this repo.
 
-A single signal hypothesis taken to ground truth. Shows the validation methodology: specific named examples, volume quantification, macro data cross-reference, confidence assessment by finding, and the GTM implication derived from the evidence.
+Each run made the next one faster. The Wold deployment took less iteration than Helpsite because the feedback loop had already tightened the output templates, claim verification rules, and scoring methodology. That's the compound loop working — not in theory, but across real engagements.
 
 ---
 
-## System Stats
+## Sample Outputs
 
-- **8 skill modules** across 4 layers
-- **7 contract specifications** defining data schemas, scoring rules, and quality gates
-- **5-dimension weighted signal scoring** with composite cut threshold
-- **3-tier claim classification** (V1: primary source / V2: secondary source / H: hypothesis) × freshness (static / dynamic / attributed)
-- **Claim budget enforcement** — PVP deliverables refuse to generate if unverified claim count exceeds threshold
+### [Intelligence Brief — Bobyard](examples/intelligence-brief-sample.md)
+
+Full Layer 1 brief: value prop analysis, buyer personas with situational qualifiers, signal stacks with conviction thresholds, 10 scored signal hypotheses with validation data and timing windows, competitive intelligence, and an honest confidence assessment separating what's validated from what's speculative.
+
+### [Signal Validation Deep Dive](examples/signal-validation-sample.md)
+
+A single signal hypothesis taken to ground truth — specific named companies, salary data, volume quantification, BLS cross-reference, and confidence ratings by finding. This is how every signal in every brief gets pressure-tested.
 
 ---
 
 ## Who Built This
 
-I'm a GTM engineer. I build outbound systems, automation, and AI-powered workflows — Clay, Claude Code, cold email infrastructure, data enrichment, lead generation.
+I'm a GTM engineer. I build outbound systems, data enrichment pipelines, and AI-powered workflows — Clay, Claude Code, cold email infrastructure, lead generation.
 
-GTM Alpha started because I kept seeing the same problem: every time I built outbound for a new company, I was starting from scratch. The research didn't transfer. The playbooks didn't compound. The things I learned about what actually works disappeared into Slack threads and Google Docs that nobody ever read again.
+I built GTM Alpha because the work kept disappearing. Every new company meant starting from zero — re-researching the same buyer patterns, re-learning which signals actually predict pipeline, re-building playbooks that someone at the last company already figured out. The research never transferred. The playbooks never compounded.
 
-So I built a system where the research is structured, the outputs are executable, claims are verified instead of assumed, and outcomes feed back into the next cycle. It's not a tool — it's an operating system for outbound intelligence.
+Now they do. The system structures the research so it's reusable, verifies claims instead of assuming them, scores signals so you know what to bet on, and tracks outcomes so the next cycle starts sharper than the last. Each deployment makes the next one faster — not because the tooling improves, but because the knowledge compounds.
 
 If you want to see it run, reach out.
